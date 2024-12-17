@@ -1,43 +1,16 @@
-/* Color Scheme */
-:root {
-    --primary-bg: #ffffff;
-    --primary-text: #333333;
-    --accent-color: #0078d4; /* A soft blue accent */
-    --secondary-bg: #f7f7f7; /* Light gray for backgrounds */
-    --hover-color: #005f99;  /* Darker blue for hover states */
-}
-
-/* Apply these colors globally */
+/* Apply the modern theme */
 body {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-}
-
-header {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--hover-color);
-}
-
-
-/* Layout Styling */
-body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--primary-bg);
 }
 
 header {
@@ -63,12 +36,13 @@ nav {
 }
 
 nav a {
-    color: var(--accent-color);
+    color: #0078d4;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--hover-color);
+    color: #005f99;
 }
 
 section {
@@ -90,25 +64,6 @@ h2 {
     margin-top: 30px;
 }
 
-
-
-/* Add hover effects for buttons or links */
-a {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-a:hover {
-    transform: scale(1.05);  /* Slightly enlarge on hover */
-    color: var(--hover-color);
-}
-
-/* Apply to content sections */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-}
-
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -116,22 +71,17 @@ section {
     }
 }
 
-/* Sticky Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--primary-bg);
-    padding: 10px 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
     body {
         padding: 20px;
     }
-    
+
     nav {
         flex-direction: column;
         align-items: center;
@@ -150,4 +100,3 @@ nav {
         font-size: 1em;
     }
 }
-
