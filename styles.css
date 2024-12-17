@@ -1,144 +1,28 @@
-/* Reset styles */
-
-/* Add this to the top of your styles.css file */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Color Scheme */
+:root {
+    --primary-bg: #ffffff;
+    --primary-text: #333333;
+    --accent-color: #0078d4; /* A soft blue accent */
+    --secondary-bg: #f7f7f7; /* Light gray for backgrounds */
+    --hover-color: #005f99;  /* Darker blue for hover states */
 }
 
-/* Basic Page Setup */
+/* Apply these colors globally */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f7f7f7;  /* Light background similar to OpenAI */
-    color: #333;  /* Dark text for contrast */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 
-h1, h2 {
-    font-family: 'Poppins', sans-serif; /* You can use a different font for headings */
+header {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 
-/* Header (Hero Section) */
-.hero {
-    background: #2d3e50;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: white;
+a {
+    color: var(--accent-color);
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
-/* Navigation */
-nav {
-    background-color: #2d3e50;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f39c12;
-}
-
-/* Portfolio Section */
-#portfolio {
-    padding: 40px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.project-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.project-card {
-    background-color: #fff;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-link {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #f39c12;
-}
-
-/* Blog Section */
-#blog {
-    padding: 40px;
-    background-color: #f9f9f9;
-}
-
-.blog-entry {
-    background-color: #fff;
-    border: 2px solid #eee;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.blog-entry h3 {
-    font-size: 1.5rem;
-}
-
-.blog-entry a {
-    text-decoration: none;
-    color: #f39c12;
-}
-
-.blog-entry a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2d3e50;
-    color: white;
+a:hover {
+    color: var(--hover-color);
 }
